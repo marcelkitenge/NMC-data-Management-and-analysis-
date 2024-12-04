@@ -494,9 +494,6 @@ gen Country="South Africa"
 sort Province week_number
 order week_year week_number Country Province district disease number_of_cases number_of_deaths Confirmed_cases
 
-
-keep if week_number==47
-
 export excel week_year week_number Country Province district disease number_of_cases number_of_deaths Confirmed_cases using "$DATA/Weekly IDSR.xls", firstrow(variables) replace
 
 save "$DATA/Weekly IDSR_25.dta", replace
